@@ -1,0 +1,360 @@
+{
+	"type": "ItemTurret",
+	"name": "海棠",
+	"description":"短时间内形成火力覆盖。",
+	"details":"很像垂发？也许它在泰伯利亚有亲戚？",
+	"health": 3850,
+	"size": 3,
+	"reload": 150,
+	"range": 760,
+	"customShadow": false,
+	"fogRadiusMultiplier": 0.21,
+	"maxAmmo": 32,
+	"recoil": 0,
+	"shootY": 0,
+    "cooldownTime": 110,
+	"minWarmup": 0.8,
+	"shootWarmupSpeed": 0.055,
+	"warmupMaintainTime": 120,
+	"solid": false,
+	"underBullets": true,
+	"elevation": 0,
+	"unitSort":"weakest",
+	"drawer": {
+		"type": "DrawTurret",
+		"parts": [
+			{
+				"type": "RegionPart",
+				"mirror": false,
+				"x": 0,
+				"y": 0,
+				"suffix": "-上",
+				"moveX": 0,
+				"moveY": -6
+			},
+			{
+				"type": "RegionPart",
+				"mirror": false,
+				"x": 0,
+				"y": 0,
+				"suffix": "-左上",
+				"moveX": 6,
+				"moveY": -6
+			},
+			{
+				"type": "RegionPart",
+				"mirror": false,
+				"x": 0,
+				"y": 0,
+				"suffix": "-左下",
+				"moveX": 6,
+				"moveY": 6
+			},
+			{
+				"type": "RegionPart",
+				"mirror": false,
+				"x": 0,
+				"y": 0,
+				"suffix": "-下",
+				"moveX": 0,
+				"moveY": 6
+			},
+			{
+				"type": "RegionPart",
+				"mirror": false,
+				"x": 0,
+				"y": 0,
+				"suffix": "-右下",
+				"moveX": -6,
+				"moveY": 6
+			},
+			{
+				"type": "RegionPart",
+				"mirror": false,
+				"x": 0,
+				"y": 0,
+				"suffix": "-右上",
+				"moveX": -6,
+				"moveY": -6
+			},
+			{
+				"type": "RegionPart",
+				"mirror": false,
+				"x": 0,
+				"y": 0,
+				"suffix": "-top",
+				"moveX": 0,
+				"moveY": 0,
+				"moveRot": 0
+			}
+		]
+	},
+	"shoot": {
+		"shots": 6,
+		"shotDelay": 0,
+		"type": "ShootBarrel",
+		"barrels": [
+		7,7,-60,
+		-7,-7,120,
+		7,-7,-120,
+		-7,7,60,
+		0,8,0,
+		0,-8,180
+		]
+	},
+	"ammoUseEffect": {
+		"type": "MultiEffect",
+		"effects": [
+			{
+				"type": "ParticleEffect",
+				"particles": 8,
+				"sizeFrom": 4,
+				"sizeTo": 1,
+				"length": 45,
+				"lifetime": 40,
+				"lightOpacity": 0,
+				"colorFrom": "FFFFFF80",
+				"colorTo": "78787870",
+				"cone": 80
+			},
+			{
+				"type": "WaveEffect",
+				"lifetime": 10,
+				"sizeFrom": 0,
+				"sizeTo": 28,
+				"strokeFrom": 2,
+				"strokeTo": 0,
+				"colorFrom": "EEC59180",
+				"colorTo": "FFFFFF"
+			}
+		]
+	},
+	"canOverdrive": false,
+	"coolantMultiplier":8,
+	"consumes": {
+		"power": 6,
+		"coolant": {
+			"amount": 0.3,
+			"optional": true
+		}
+	},
+	"shootSound": "DD1",
+	"targetGround": true,
+	"targetAir": true,
+	"inaccuracy": 0,
+	"shootCone": 360,
+	"shake": 1,
+	"rotateSpeed": 0,
+	"ammoPerShot":1,
+	"ammoTypes": {
+		"surge-alloy": {
+			"type": "MissileBulletType",
+			"buildingDamageMultiplier": 0.3,
+			"lightningDamage": 50,
+			"lightning": 5,
+			"lightningLength": 8,
+			"speed": 6,
+			"damage": 64,
+			"knockback": 5,
+			"pierceArmor":true,
+			"homingDelay": 10,
+			"homingPower": 0.15,
+			"homingRange": 800,
+			"lifetime": 210,
+			"width": 13,
+			"height": 13,
+			"sprite": "plantindustry-海棠花",
+			"backColor": "F2E770FF",
+			"frontColor": "E3E3E3",
+			"trailLength": 16,
+			"trailWidth": 2.5,
+			"trailColor": "FFFFFF80",
+			"trailEffect": "none",
+			"hitEffect": "flakExplosionBig",
+			"shootEffect": "shootSmallFlame",
+			"splashDamageRadius": 45,
+			"splashDamage": 175
+		},
+		"IceCrystal": {
+			"type": "MissileBulletType",
+			"buildingDamageMultiplier": 0.3,
+			"speed": 5,
+			"damage": 22,
+			"knockback": 5,
+			"pierceArmor":true,
+			"ammoMultiplier": 1,
+			"status": "unmoving",
+			"statusDuration": 60,
+			"homingDelay": 10,
+			"homingPower": 0.15,
+			"homingRange": 800,
+			"lifetime": 200,
+			"width": 12,
+			"height": 12,
+			"sprite": "plantindustry-海棠花",
+			"backColor": "7595D2FF",
+			"frontColor": "E3E3E3",
+			"trailLength": 14,
+			"trailWidth": 1.5,
+			"trailColor": "FFFFFF80",
+			"trailEffect": "none",
+			"hitEffect": "flakExplosionBig",
+			"shootEffect": "shootSmallFlame",
+			"splashDamageRadius": 32,
+			"splashDamage": 60
+		},
+		"LavaBerry": {
+			"type": "MissileBulletType",
+			"buildingDamageMultiplier": 0.3,
+			"speed": 10,
+			"damage": 160,
+			"knockback": 10,
+			"ammoMultiplier": 1,
+			"homingDelay": 4,
+			"homingPower": 0.5,
+			"homingRange": 800,
+			"lifetime": 90,
+			"width": 13,
+			"height": 13,
+			"hittable": false,
+			"pierceArmor": true,
+			"status": "炎火",
+			"statusDuration": 104,
+			"absorbable": false,
+			"sprite": "plantindustry-海棠花",
+			"backColor": "EEC591",
+			"frontColor": "E3E3E3",
+			"trailLength": 15,
+			"trailWidth": 1.5,
+			"trailColor": "FFFFFF80",
+			"trailEffect": "none",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 5,
+						"sizeFrom": 4,
+						"sizeTo": 0,
+						"length": 55,
+						"baseLength": 9,
+						"lifetime": 15,
+						"colorFrom": "FEEBB3",
+						"colorTo": "FFFFFF"
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 10,
+						"sizeFrom": 2,
+						"sizeTo": 50,
+						"strokeFrom": 3,
+						"strokeTo": 0,
+						"colorFrom": "FEEBB3",
+						"colorTo": "FEEBB3"
+					}
+				]
+			},
+			"despawnEffect": "instBomb",
+			"shootEffect": "shootSmallFlame",
+			"hitSound": "laser",
+			"splashDamageRadius": 72,
+			"splashDamage": 185,
+			"splashDamagePierce": true,
+			"fragRandomSpread": 0,
+			"fragBullets": 1,
+			"fragBullet": {
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 5,
+							"sizeFrom": 4,
+							"sizeTo": 0,
+							"length": 45,
+							"baseLength": 9,
+							"lifetime": 15,
+							"colorFrom": "FEEBB3",
+							"colorTo": "FFFFFF",
+							"cone": 40
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 10,
+							"sizeFrom": 2,
+							"sizeTo": 40,
+							"strokeFrom": 3,
+							"strokeTo": 0,
+							"colorFrom": "FEEBB3",
+							"colorTo": "FEEBB3"
+						}
+					]
+				},
+				"despawnEffect": "instBomb",
+				"hitSound": "laser",
+				"buildingDamageMultiplier": 0.3,
+				"width": 10,
+				"height": 4,
+				"damage": 60,
+				"pierceArmor":true,
+				"collides": true,
+				"splashDamageRadius": 40,
+				"splashDamage": 90,
+				"lifetime": 10,
+				"speed": 3.2,
+				"fragRandomSpread": 0,
+				"fragBullets": 1,
+				"fragBullet": {
+					"hitEffect": {
+						"type": "MultiEffect",
+						"effects": [
+							{
+								"type": "ParticleEffect",
+								"particles": 5,
+								"sizeFrom": 4,
+								"sizeTo": 0,
+								"length": 45,
+								"baseLength": 9,
+								"lifetime": 15,
+								"colorFrom": "FEEBB3",
+								"colorTo": "FFFFFF",
+								"cone": 40
+							},
+							{
+								"type": "WaveEffect",
+								"lifetime": 10,
+								"sizeFrom": 2,
+								"sizeTo": 40,
+								"strokeFrom": 3,
+								"strokeTo": 0,
+								"colorFrom": "FEEBB3",
+								"colorTo": "FEEBB3"
+							}
+						]
+					},
+					"buildingDamageMultiplier": 0.3,
+					"despawnEffect": "instBomb",
+					"hitSound": "laser",
+					"width": 10,
+					"height": 4,
+					"damage": 60,
+					"pierceArmor":true,
+					"collides": true,
+					"splashDamageRadius": 40,
+					"splashDamage": 90,
+					"lifetime": 10,
+					"speed": 3.2
+				}
+			}
+		}
+	},
+	"requirements": [
+		"lead/190",
+		"graphite/70",
+		"LavaBerry/30",
+		"plastanium/50"
+	],
+	"researchCostMultiplier": 0.45,
+	"category": "turret",
+	"research": "桫椤"
+}

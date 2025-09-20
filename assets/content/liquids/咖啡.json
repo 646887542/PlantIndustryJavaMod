@@ -1,0 +1,12 @@
+{
+	"name": "咖啡",
+	"description": "提神醒脑。",
+	"alwaysUnlocked":false,
+	"lightColor":"bd0b0070",
+	"color": "bd0b00FF",
+	"effect":"freezing",
+	"temperature": 0.5,
+	"heatCapacity": 1.45,
+	"viscosity": 0.3,
+	"research": "water"
+}

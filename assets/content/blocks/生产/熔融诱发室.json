@@ -1,0 +1,49 @@
+{
+	"type": "GenericCrafter",
+	"name": "熔融诱发室",
+	"description": "在熔融的环境中，制造出熔岩浆果。",
+	"details":"冰晶用于冷却。",
+	"outputItem": { "item": "LavaBerry", "amount": 1},
+	"size": 3,
+	"hasPower": true,
+	"hasLiquids": false,
+	"hasItems": true,
+	"craftTime": 30,
+	"acceptsItems":true,
+	"itemCapacity": 20,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			{
+				"type":"DrawLiquidTile",
+				"drawLiquid": "slag"
+			},
+			"DrawDefault",
+			{
+				"type": "DrawRegion",
+				"suffix": "-top"
+			},
+			"DrawFlame"
+		]
+	},
+	"consumes": {
+			"power":20,
+			"items": [
+				"Biomass/2",
+				"IceCrystal/1",
+				"surge-alloy/1"
+			]
+		},
+	"requirements": [
+		{ "item": "lead", "amount": 60},
+		{ "item": "surge-alloy", "amount": 20 },
+		{ "item": "silicon", "amount": 40 },
+		{ "item": "copper", "amount": 100 }
+	],
+	"category": "crafting",
+	"research": "雷电发生器"
+}

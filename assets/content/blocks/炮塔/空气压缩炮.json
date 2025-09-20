@@ -1,0 +1,41 @@
+{
+	"type":"PowerTurret",
+	"name":"空气压缩炮",
+	"description":"向敌人发射空气。",
+	"size":1,
+	"health":300,
+	"ammoPerShot":1,
+	"range":140,
+	"reload":30,
+	"inaccuracy":0,
+	"rotatespeed":3,
+	"maxAmmo":30,
+	"targetAir":true,
+	"targetGround":true,
+	"coolantMultiplier":3,
+	"consumes": {
+		"power": 0.5,
+		"coolant": {
+			"amount": 0.05,
+			"optional": true
+		}
+	},
+	"heatColor":"#244324",
+	"shootType":{
+		"type":"BasicBulletType",
+		"damage":0,
+		"speed":10,
+		"lifetime":14,
+		"width":3,
+		"knockback": 60,
+		"height":3
+	},
+	"requirements": [
+		"lead/20",
+		"copper/20"
+	],
+	"category": "turret",
+	"research": {
+		"parent": "duo"
+	}
+}

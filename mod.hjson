@@ -1,0 +1,23 @@
+#the mod name as displayed in-game
+displayName: "PlantIndustry-植物工厂"
+
+#the internal name of your mod
+name: "plantindustry"
+
+#your name
+author: "一赏海棠"
+
+#the fully qualified main class of the mod
+main: "pi.PlantIndustry"
+
+#the mod description as seen in the mod dialog
+description: "本mod目前没有完工，没有进行平衡性测试，\n[red[]]请谨慎游玩！[white[]]"
+
+#the mod version
+version: 1.0
+
+#the minimum game build required to run this mod
+minGameVersion: 146
+
+#this is a java mod
+java: true

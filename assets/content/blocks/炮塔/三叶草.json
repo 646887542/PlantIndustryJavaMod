@@ -1,0 +1,93 @@
+{
+	"type":"ItemTurret",
+	"name":"三叶草",
+	"description":"",
+	"size":3,
+	"health":2000,
+	"ammoPerShot":1,
+	"range":480,
+	"recoil":3,
+	"reload":30,
+	"inaccuracy":0,
+	"rotatespeed":10,
+	"totalShots":2,
+	"maxAmmo":360,
+	"targetAir":true,
+	"targetGround":true,
+	"coolantMultiplier":5,
+	"consumes": {
+		"coolant": {
+			"amount": 0.5,
+			"optional": true
+		}
+	},
+	"shoot": {
+		"shots": 8,
+		"shotDelay": 2,
+		"type":"ShootBarrel",
+		"barrels":[
+			5,-2,0,
+			-5,-2,0,
+			3,0,0,
+			-3,0,0
+		]
+	},
+	"drawer": {
+		"type": "DrawTurret",
+		"parts": [
+			{
+				"type": "RegionPart",
+				"mirror": false,
+				"x": 0,
+				"y": 0,
+				"suffix": "-左",
+				"moveRot": -120
+			},
+			{
+				"type": "RegionPart",
+				"mirror": false,
+				"x": 0,
+				"y": 0,
+				"suffix": "-右",
+				"moveRot": 120
+			},
+			{
+				"type": "RegionPart",
+				"mirror": false,
+				"x": 0,
+				"y": 0,
+				"suffix": "-top"
+			}
+		]
+	},
+	"heatColor":"#ff0000",
+	"ammoTypes":{
+			"plastanium": {
+				"type": "BasicBulletType",
+				"speed": 20,
+				"damage": 30,
+				"pierceArmor":true,
+				"pierce": true,
+				"knockback": 5,
+				"sprite":"missile-large",
+				"lifetime":24,
+				"width": 3,
+				"height": 6,
+				"ammoMultiplier":6,
+				"shootEffect": "shootBig",
+				"hitColor":"#000000FF",
+				"status":"穿刺",
+				"statusDuration":80
+			}
+		},
+	"requirements": [
+		"Biomass/40",
+		"plastanium/40",
+		"silicon/30",
+		"graphite/45"
+	],
+	"category": "turret",
+	"research": {
+		"parent": "松针"
+	}
+}

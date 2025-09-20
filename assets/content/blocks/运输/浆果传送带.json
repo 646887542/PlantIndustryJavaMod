@@ -1,0 +1,15 @@
+{
+	"type": "Conveyor",
+	"name": "浆果传送带",
+	"description": "向前方运输物品",
+	"health": 300,
+	"requirements": [
+		{"item": "LuminousBerry", "amount": 10},
+		{"item": "titanium", "amount": 2},
+		{"item": "graphite", "amount": 4}
+	],
+	"category": "distribution",
+	"research":"浆果温室",
+	"speed": 0.24,
+	"displayedSpeed": 30
+}

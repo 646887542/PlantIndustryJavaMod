@@ -1,0 +1,127 @@
+{
+	"type":"ItemTurret",
+	"name":"桫椤",
+	"description":"向敌人发射密集爆炸性子弹",
+	"size":2,
+	"health":3600,
+	"ammoPerShot":1,
+	"range":280,
+	"reload":30,
+	"inaccuracy":15,
+	"rotatespeed":3,
+	"maxAmmo":120,
+	"targetAir":true,
+	"targetGround":true,
+	"coolantMultiplier":8,
+	"consumes": {
+		"coolant": {
+			"amount": 0.15,
+			"optional": true
+		}
+	},
+	"heatColor":"#244324",
+	"shoot":{
+		"type":"ShootBarrel",
+		"barrels":[
+			0,0,0,
+			3,0,0,
+			-3,0,0
+		]
+	},
+	"ammoTypes":{
+			"LuminousBerry": {
+				"reloadMultiplier":1.2,
+				"speed": 10,
+				"damage": 10,
+				"lifetime":50,
+				"width": 16,
+				"height": 16,
+				"ammoMultiplier":6,
+				"knockback": 2,
+				"shootEffect": "shootBig",
+				"backColor":"#30FF98FF",
+				"frontColor":"#30FF98FF",
+				"hitColor":"#000000FF",
+				"splashDamageRadius":72,
+				"homingPower": 0.24,
+				"homingRange": 320,
+				"splashDamage":15,
+				"status":"melting",
+				"statusDuration":600,
+				"fragBullets": 5,
+				"fragBullet": {
+					"type": "PointBulletType",
+					"Damage": 6,
+					"trailEffect": "instTrail",
+					"hitEffect": "flakExplosion",
+					"despawnEffect": "flakExplosion",
+					"backColor":"#783EFFFF",
+					"frontColor":"#30FF98FF",
+					"heatColor":"#FF6A6AFF",
+					"trailColor":"#FF00D5FF",
+					"splashDamageRadius":72,
+					"splashDamage": 15,
+					"status": "melting",
+					"statusDuration": 180,
+					"speed": 21,
+					"lifetime": 6
+				}
+			},
+			"phase-fabric":{
+				"type": "BasicBulletType",
+				"reloadMultiplier":1.5,
+				"speed": 10,
+				"knockback": 5,
+				"lifetime":60,
+				"damage": 55,
+				"sprite":"missile-large",
+				"width": 8,
+				"height": 8,
+				"reflectable": false,
+				"homingPower": 0.24,
+				"homingDelay":10,
+				"homingRange": 800,
+				"ammoMultiplier":2,
+				"splashDamageRadius": 72,
+				"splashDamage": 60,
+				"backColor":"#783EFFFF",
+				"frontColor":"#30FF98FF",
+				"trailLength": 100,
+				"trailWidth": 4,
+				"trailColor": "#FF6A6AFF",
+				"status":"electrified",
+				"statusDuration":360,
+				"heatColor":"#FF6A6AFF",
+				"fragBullets": 10,
+				"fragBullet": {
+					"type": "PointBulletType",
+					"Damage": 30,
+					"trailEffect": "instTrail",
+					"hitEffect": "flakExplosion",
+					"despawnEffect": "flakExplosion",
+					"backColor":"#783EFFFF",
+					"frontColor":"#30FF98FF",
+					"heatColor":"#FF6A6AFF",
+					"trailColor":"#FF00D5FF",
+					"splashDamageRadius":144,
+					"splashDamage": 40,
+					"status": "electrified",
+					"statusDuration": 180,
+					"speed": 21,
+					"lifetime": 10
+				}
+			}
+		},
+	"requirements": [
+		"titanium/50",
+		"silicon/40",
+		"LuminousBerry/90"
+	],
+	"category": "turret",
+	"research": {
+		"parent": "松针",
+		"objectives": [
+			{"type": "SectorComplete","preset": "tarFields"}
+		]
+	}
+}

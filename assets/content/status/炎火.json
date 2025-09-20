@@ -1,0 +1,26 @@
+{
+	"name": "炎火",
+	"color": "#ff0000",
+	"damage": 20,
+	"healthMultiplier": 0.6,
+	"speedMultiplier": 0.5,
+	"damageMultiplier": 0.6,
+	"reloadMultiplier": 0.5,
+	"dragMultiplier": 2.8,
+	"effectChance": 0.12,
+	"effect": {
+		"type": "ParticleEffect",
+		"particles": 1,
+		"baseLength": 30,
+		"length": -30,
+		"lifetime": 30,
+		"spin": 6,
+		"interp":"pow3Out",
+		"sizeInterp":"pow3In",
+		"region": "plantindustry-三角形",
+		"sizeFrom": 1,
+		"sizeTo": 0,
+		"colorFrom": "#ff0000",
+		"colorTo": "#cf5400"
+	}
+}

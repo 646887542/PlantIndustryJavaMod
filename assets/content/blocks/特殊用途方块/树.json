@@ -1,0 +1,9 @@
+{
+	"name": "树",
+	"breakable": true,
+	"solid": true,
+	"itemDrop": "水晶",
+	"requirements": [
+		{ "item": "水晶", "amount": 0 }
+	]
+}

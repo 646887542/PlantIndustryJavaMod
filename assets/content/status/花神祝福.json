@@ -1,0 +1,7 @@
+{
+	"name": "花神祝福",
+	"description": "来自花神的祝福。",
+	"buildSpeedMultiplier": 2.0,
+	"damage":-200,
+	"healthMultiplier": 2.0
+}

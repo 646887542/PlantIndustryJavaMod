@@ -1,0 +1,14 @@
+{
+	"name": "蓝莓",
+	"description": "生长在极度寒冷的地区，因此体内充满了冷冻液。",
+	"details":"据说那里连孢子都无法生长。",
+	"hardness": 0,
+	"cost":1,
+	"color": "#1640ff",
+	"alwaysUnlocked":false,
+	"radioactivity": 0,
+	"explosiveness": 0,
+	"flammability": 0,
+    "frames":1,
+	"research": "IceCrystal"
+}

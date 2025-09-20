@@ -1,0 +1,35 @@
+{
+	"type": "GenericCrafter",
+	"name": "冰晶凝结器",
+	"description": "将大气中的水凝结成冰晶。",
+	"outputItem": { "item": "IceCrystal", "amount": 1},
+	"size": 2,
+	"hasPower": true,
+	"hasLiquids": true,
+	"hasItems": true,
+	"craftTime": 30,
+	"acceptsItems":true,
+	"itemCapacity": 75,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			"DrawDefault",
+			"DrawFlame"
+		]
+	},
+	"consumes": {
+			"power":0.5,
+			"liquids": ["cryofluid/0.1"],
+			"items": [
+				"metaglass/1"
+			]
+		},
+	"requirements": [
+		{ "item": "lead", "amount": 30},
+		{ "item": "titanium", "amount": 10 },
+		{ "item": "silicon", "amount": 20 },
+		{ "item": "copper", "amount": 100 }
+	],
+	"category": "crafting",
+	"research": "浆果温室"
+}

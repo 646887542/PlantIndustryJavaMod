@@ -1,0 +1,10 @@
+{
+	"name": "穿刺",
+	"color": "#ff0000",
+	"damage": 1,
+	"healthMultiplier": 0.8,
+	"speedMultiplier": 0.8,
+	"damageMultiplier": 0.8,
+	"reloadMultiplier": 0.8,
+	"dragMultiplier": 2.8
+}

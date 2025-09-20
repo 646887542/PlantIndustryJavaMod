@@ -1,0 +1,20 @@
+{
+	"name": "发光浆果",
+	"description": "生长于未知区域的果实",
+	"details":"富含多种元素......它是怎么长出来的？！",
+	"hardness": 0,
+	"cost":1,
+	"color": "#ffcf00",
+	"alwaysUnlocked":false,
+//是否总是在科技树中解锁
+	"radioactivity": 0.4,
+//放射性
+	"explosiveness": 0,
+	"flammability": 0.5,
+//可燃性
+	"frames":4,
+	"transitionFrames":1,
+	"frameTime":3,
+	"research": "Biomass"
+//在科技树哪个物品下
+}

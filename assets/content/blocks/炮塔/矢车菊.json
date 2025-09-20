@@ -1,0 +1,49 @@
+{
+	"type":"PowerTurret",
+	"name":"矢车菊",
+	"description":"外柔内刚",
+	"size":2,
+	"health":2520,
+	"ammoPerShot":1,
+	"range":320,
+	"reload":5,
+	"inaccuracy":0,
+	"rotatespeed":5,
+	"targetAir":true,
+	"targetGround":true,
+	"coolantMultiplier":8,
+	"consumes": {
+		"power": 35,
+		"coolant": {
+			"amount": 0.25,
+			"optional": true
+		}
+	},
+	"shootType":{
+		"type":"BasicBulletType",
+		"damage":0,
+		"speed":0,
+		"lifetime":0,
+		"width":8,
+		"height":8,
+		"lightning": 20,
+		"lightningSpacing": 64,
+		"lightningLength": 48,
+		"lightningColor": "797fe4",
+		"lightningDelay": 1.2,
+		"lightningDamage": 100,
+		"lightningAngleRand": 360
+	},
+	"requirements": [
+		"titanium/60",
+		"silicon/80",
+		"LightningReed/30"
+	],
+	"category": "turret",
+	"research": {
+		"parent": "雷电发生器",
+		"objectives": [
+			{"type": "SectorComplete","preset": "planetaryTerminal"}
+		]
+	}
+}

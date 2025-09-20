@@ -1,0 +1,11 @@
+{
+	"name": "特殊核心",
+	"unitType": "poly",
+	"alwaysUnlocked":false,
+	"armor":100,
+	"health": 10000000,
+	"itemCapacity": 800,
+	"size": 3,
+	"unitCapModifier": 10,
+	"category": "effect"
+}

@@ -1,0 +1,100 @@
+{
+	"type":"ItemTurret",
+	"name":"松针",
+	"description":"冻结，击退。",
+	"size":2,
+	"health":1200,
+	"ammoPerShot":1,
+	"range":280,
+	"recoil":1,
+	"reload":240,
+	"inaccuracy":0,
+	"rotatespeed":3,
+	"totalShots":2,
+	"maxAmmo":120,
+	"targetAir":true,
+	"targetGround":true,
+	"coolantMultiplier":5,
+	"consumes": {
+		"coolant": {
+			"amount": 0.15,
+			"optional": true
+		}
+	},
+	"shoot": {
+		"shots": 3,
+		"shotDelay": 4
+	},
+	"heatColor":"#ff0000",
+	"ammoTypes":{
+			"graphite": {
+				"type": "BasicBulletType",
+				"speed": 10,
+				"damage": 26,
+				"knockback": 25,
+				"sprite":"missile-large",
+				"lifetime":28,
+				"width": 8,
+				"height": 8,
+				"ammoMultiplier":4,
+				"shootEffect": "shootBig",
+				"hitColor":"#000000FF",
+				"status":"slow",
+				"statusDuration":120,
+				"splashDamage":15,
+				"splashDamageRadius":40
+			},
+			"silicon": {
+				"type": "BasicBulletType",
+				"speed": 10,
+				"damage": 18,
+				"knockback": 18,
+				"reloadMultiplier":1.2,
+				"sprite":"missile-large",
+				"lifetime":28,
+				"width": 8,
+				"height": 8,
+				"ammoMultiplier":2,
+				"shootEffect": "shootBig",
+				"hitColor":"#000000FF",
+				"homingPower": 0.24,
+				"homingDelay":10,
+				"homingRange": 400,
+				"status":"slow",
+				"statusDuration":120,
+				"splashDamage":12,
+				"splashDamageRadius":40
+			},
+			"IceCrystal": {
+				"type": "BasicBulletType",
+				"speed": 10,
+				"damage": 13,
+				"knockback": 10,
+				"pierceArmor":true,
+				"reloadMultiplier":1.8,
+				"sprite":"missile-large",
+				"lifetime":28,
+				"width": 8,
+				"height": 8,
+				"ammoMultiplier":4,
+				"shootEffect": "shootBig",
+				"hitColor":"#000000FF",
+				"homingPower": 0.24,
+				"homingDelay":10,
+				"homingRange": 400,
+				"status":"unmoving",
+				"statusDuration":60,
+				"splashDamage":16,
+				"splashDamageRadius":40
+			}
+		},
+	"requirements": [
+		"titanium/20",
+		"silicon/10",
+		"IceCrystal/15"
+	],
+	"category": "turret",
+	"research": {
+		"parent": "浆果温室"
+	}
+}

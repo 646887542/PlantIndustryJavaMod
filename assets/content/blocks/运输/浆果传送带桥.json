@@ -1,0 +1,19 @@
+{
+    "type": "ItemBridge",
+    "name": "浆果传送带桥",
+    "health": 560,
+    "armor": 8,
+    "range": 6,
+    "transportTime":1,
+    "arrowSpacing": 8,
+    "arrowOffset": 4,
+    "arrowTimeScl": 18,
+    "bridgeWidth": 8,
+    "requirements": [
+        "silicon/5",
+        "LuminousBerry/25",
+        "graphite/15"
+    ],
+    "category": "distribution",
+    "research": "浆果传送带"
+}

@@ -1,0 +1,83 @@
+{
+	"type":"PowerTurret",
+	"name":"向日葵",
+	"description":"向阳而生",
+	"size":2,
+	"health":3030,
+	"range":320,
+	"reload":240,
+	"cooldownTime": 60,
+	"recoil": 5,
+	"recoilTime": 30,
+	"moveWhileCharging": false,
+	"minWarmup": 0.99,
+	"shootWarmupSpeed": 0.025,
+	"warmupMaintainTime": 60,
+	"alternate":false,
+	"inaccuracy":0,
+	"rotatespeed":5,
+	"targetAir":true,
+	"targetGround":true,
+	"shootSound": "railgun",
+	"coolantMultiplier":8,
+	"consumes": {
+		"power": 55,
+		"coolant": {
+			"amount": 0.25,
+			"optional": true
+		}
+	},
+	"shoot": {
+		"shots": 4,
+		"shotDelay": 0,
+		"type": "ShootBarrel",
+		"barrels": [
+		15,-30,0,
+		-15,-30,0,
+		30,-20,0,
+		-30,-20,0
+		]
+	},
+	"shootType":{
+		"type":"LaserBulletType",
+		"backColor":"#0056ff",
+		"frontColor":"#ffee34",
+		"trailColor":"#0056ff",
+		"length": 320,
+		"lengthFalloff":0.5,
+		"damage": 3000,
+		"width": 60,
+		"lifetime": 30,
+		"hitSound": "shotgun",
+		"largeHit": true
+	},
+	"drawer":{
+		"type":"DrawTurret",
+		"parts":[
+			{
+				"type":"HaloPart",
+				"progress":"warmup",
+				"tri":false,
+				"sides":5,
+				"radius":2,
+				"shapes":6,
+				"y": -15,
+				"hollow":true,
+				"color":"FF4500",
+				"layer": 110,
+				"haloRadius":16,
+				"haloRotation":10,
+				"haloRotateSpeed":3,
+				"stroke":4
+			}
+		]
+	},
+	"requirements": [
+		"thorium/60",
+		"silicon/80",
+		"surge-alloy/10",
+		"LightningReed/10"
+	],
+	"category": "turret",
+	"research":"矢车菊"
+}

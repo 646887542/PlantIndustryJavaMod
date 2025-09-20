@@ -1,0 +1,47 @@
+{
+	"type": "GenericCrafter",
+	"name": "咖啡机",
+	"health": 360,
+	"outputLiquid": {
+		"liquid": "咖啡",
+		"amount": 0.35
+	},
+	"itemCapacity": 14,
+	"size": 2,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			{
+				"type": "DrawLiquidTile",
+				"drawLiquid": "咖啡"
+			},
+			"DrawDefault"
+		]
+	},
+	"hasItems": true,
+	"hasLiquids": true,
+	"outputsLiquid": true,
+	"hasPower": true,
+	"liquidCapacity": 60,
+	"craftTime": 60,
+	"updateEffect": "reactorsmoke",
+	"consumes": {
+		"power": 4,
+		"items": [
+			"CoffeeBean/1"
+		],
+		"liquid": "water/0.35"
+	},
+	"requirements": [
+		"thorium/80",
+		"metaglass/40",
+		"silicon/40",
+		"graphite/80"
+	],
+	"category": "crafting",
+	"research": "咖啡豆辐变室"
+}

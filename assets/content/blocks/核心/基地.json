@@ -1,0 +1,17 @@
+{
+	"name": "基地",
+	"description": "在前线建立一个可拆除的先锋作战基地。",
+	"requirements": [
+		"copper/800",
+		"lead/1000",
+		"silicon/500"
+	],
+	"unitType": "alpha",
+	"alwaysUnlocked":true,
+	"armor":100,
+	"health": 1000,
+	"itemCapacity": 800,
+	"size": 3,
+	"unitCapModifier": 4,
+	"category": "effect"
+}

@@ -1,0 +1,42 @@
+{
+	"type": "Separator",
+	"name": "元素分离机",
+	"description": "从浆果中提取元素",
+	"results": [
+		{ "item": "thorium", "amount": 1},
+		{ "item": "titanium", "amount": 1},
+		{ "item": "silicon", "amount": 1},
+		{ "item": "graphite", "amount": 1}
+	],
+	"size": 2,
+	"spinnerSpeed":3,
+	"hasPower": true,
+	"hasLiquids": false,
+	"hasItems": true,
+	"craftTime": 15,
+	"itemCapacity": 75,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			"DrawWeave",
+			"DrawDefault"
+		]
+	},
+	"consumes": {
+		"power":2,
+		"items": [
+			"LuminousBerry/1"
+		]
+			},
+	"requirements": [
+		{ "item": "titanium", "amount": 50},
+		{ "item": "silicon", "amount": 20 },
+		{ "item": "LuminousBerry", "amount": 150 }
+	],
+	"category": "crafting",
+	"research": "浆果温室"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "水晶",
+  "description": "具有能量的水晶",
+  "hardness": 1,
+  "cost":5,
+  "color": "#97e5ff",
+  "alwaysUnlocked":false,
+  "radioactivity": 0,
+  "explosiveness": 0,
+  "flammability": 0,
+  "frames":1,
+  "research": ""
+}

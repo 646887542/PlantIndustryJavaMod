@@ -1,0 +1,42 @@
+{
+	"type": "AttributeCrafter",
+	"name": "大型孢子培养机",
+	"description": "快速培养孢子",
+	"outputItem": { "item": "spore-pod", "amount": 5},
+	"size": 3,
+	"hasPower": true,
+	"hasLiquids": false,
+	"hasItems": true,
+	"craftTime": 120,
+	"acceptsItems":true,
+	"itemCapacity": 75,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			"DrawDefault",
+			"DrawCultivator",
+			{
+				"type": "DrawRegion",
+				"suffix": "-top"
+			}
+		]
+	},
+	"consumes": {
+		"power":4,
+		"liquids": ["water/0.8"]
+	},
+	"requirements": [
+		{ "item": "lead", "amount": 50},
+		{ "item": "水晶", "amount": 30},
+		{ "item": "silicon", "amount": 20 },
+		{ "item": "copper", "amount": 100 }
+	],
+	"category": "production",
+	"attribute": "spores",
+	"minEfficiency": 1,
+	"research": "生物质培养机"
+}

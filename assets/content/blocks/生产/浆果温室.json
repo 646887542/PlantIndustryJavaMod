@@ -1,0 +1,32 @@
+{
+	"type": "GenericCrafter",
+	"name": "浆果温室",
+	"description": "培养浆果......",
+	"outputItem": { "item": "LuminousBerry", "amount": 1},
+	"size": 2,
+	"health":1000,
+	"hasPower": false,
+	"hasLiquids": false,
+	"hasItems": true,
+	"craftTime": 10,
+	"itemCapacity": 72,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			"DrawWeave",
+			"DrawDefault"
+		]
+	},
+	"requirements": [
+		{ "item": "lead", "amount": 100},
+		{ "item": "thorium", "amount": 50 },
+		{ "item": "silicon", "amount": 20 },
+		{ "item": "Biomass", "amount": 150 }
+	],
+	"category": "crafting",
+	"research": "生物质培养机"
+}
