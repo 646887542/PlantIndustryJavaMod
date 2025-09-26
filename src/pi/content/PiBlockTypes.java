@@ -75,7 +75,7 @@ public class PiBlockTypes {
             ));
 
             ammo(
-                    Vars.content.item(PlantIndustry.name("Blueberries")), new EmpInterceptBulletType() {{
+                    titanium, new EmpInterceptBulletType() {{
                         // 基础属性
                         scaleLife = true;
                         timeIncrease = 2f;
