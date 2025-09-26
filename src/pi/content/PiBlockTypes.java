@@ -8,9 +8,10 @@ import mindustry.type.ItemStack;
 import mindustry.world.Block;
 import pi.PlantIndustry;
 import pi.classes.blocks.InterstellarLaunchPad;
+import pi.classes.blocks.ItemDefenseTurret;
 
 public class PiBlockTypes {
-    public static Block BaseCore, InterstellarLaunchPad;
+    public static Block BaseCore, InterstellarLaunchPad, Gypsophila;
 
     public static void load() {
         BaseCore = Vars.content.block(PlantIndustry.name("基地"));
@@ -24,5 +25,7 @@ public class PiBlockTypes {
             size = 3;
             liquidCapacity = 600f;
         }};
+
+        Gypsophila = new ItemDefenseTurret("满天星");
     }
 }
