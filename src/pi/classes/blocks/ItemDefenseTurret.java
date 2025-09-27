@@ -1,6 +1,5 @@
 package pi.classes.blocks;
 
-import mindustry.gen.Bullet;
 import mindustry.gen.Groups;
 import mindustry.world.blocks.defense.turrets.ItemTurret;
 
