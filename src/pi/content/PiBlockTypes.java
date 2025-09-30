@@ -5,7 +5,6 @@ import arc.math.Interp;
 import mindustry.Vars;
 import mindustry.content.Fx;
 import mindustry.content.Items;
-import mindustry.content.StatusEffects;
 import mindustry.entities.effect.MultiEffect;
 import mindustry.entities.effect.ParticleEffect;
 import mindustry.entities.effect.WaveEffect;
@@ -64,8 +63,8 @@ public class PiBlockTypes {
             unitSort = weakest;
 
             // 资源消耗
-            consumePower(30f);
-            consumeLiquid(cryofluid, 0.8f);
+            consumePower(45f);
+            consumeLiquid(cryofluid, 1.5f);
             requirements(Category.turret, with(
                     plastanium, 60,
                     silicon, 100,
@@ -102,7 +101,7 @@ public class PiBlockTypes {
                         pierceArmor = true;
                         splashDamageRadius = 100f;
                         splashDamage = 108f;
-                        status = StatusEffects.corroded;
+                        status = PiStatuses.Mismatch;
 
                         // 视觉效果
                         sprite = "missile-large";
@@ -183,7 +182,7 @@ public class PiBlockTypes {
                                 radius = 100f;
                                 knockback = 10f;
                                 hitColor = Color.valueOf("7e88dd");
-                                status = StatusEffects.electrified;
+                                status = PiStatuses.Mismatch;
                                 statusDuration = 8f * 60f;
 
                                 hitEffect = new MultiEffect(

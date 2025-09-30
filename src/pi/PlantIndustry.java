@@ -27,6 +27,7 @@ public class PlantIndustry extends Mod{
         EntityRegister.load();
         PiUnitTypes.load();
         PiBlockTypes.load();
+        PiStatuses.load();
         PiPlanets.load();
         PiSectors.load();
         PiTechTree.Load();

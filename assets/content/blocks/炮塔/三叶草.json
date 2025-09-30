@@ -73,7 +73,7 @@
 				"lifetime":24,
 				"width": 3,
 				"height": 6,
-				"ammoMultiplier":6,
+				"ammoMultiplier":2,
 				"shootEffect": "shootBig",
 				"hitColor":"#000000FF",
 				"status":"穿刺",
