@@ -26,10 +26,9 @@ public class EmpInterceptBulletType extends EmpBulletType {
 
         Groups.bullet.intersect(x - radius, y - radius, radius * 2.0f, radius * 2.0f, other -> {
             if(b.team != other.team && b.type.hittable){
-                float v = splashDamage/* * damageMultiplier*/;
+                float v = splashDamage;
                 if(other.damage > v){
                     other.damage -= v;
-                    /*other.vel.scl(speedMultiplier);*/
                 }else{
                     other.remove();
                 }

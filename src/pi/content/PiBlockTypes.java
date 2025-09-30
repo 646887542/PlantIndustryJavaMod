@@ -42,7 +42,6 @@ public class PiBlockTypes {
         }};
 
         Gypsophila = new ItemDefenseTurret("Gypsophila") {{
-
             // 基础属性
             size = 3;
             health = 3800;
@@ -179,6 +178,7 @@ public class PiBlockTypes {
                                 speed = 8f;
                                 lifetime = 20f;
                                 damage = 48f;
+                                splashDamage = 30f;
                                 pierceArmor = true;
                                 radius = 100f;
                                 knockback = 10f;
@@ -222,5 +222,8 @@ public class PiBlockTypes {
                     }}
             );
         }};
+    }
+
+    public static void loadBlock() {
     }
 }
