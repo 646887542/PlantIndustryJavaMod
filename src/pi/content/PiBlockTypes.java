@@ -4,7 +4,7 @@ import arc.graphics.Color;
 import arc.math.Interp;
 import mindustry.Vars;
 import mindustry.content.Fx;
-import mindustry.content.Items;
+import mindustry.entities.bullet.LaserBoltBulletType;
 import mindustry.entities.effect.MultiEffect;
 import mindustry.entities.effect.ParticleEffect;
 import mindustry.entities.effect.WaveEffect;
@@ -13,6 +13,7 @@ import mindustry.gen.Sounds;
 import mindustry.type.Category;
 import mindustry.world.Block;
 import pi.PlantIndustry;
+import pi.classes.blocks.DefensiveTower;
 import pi.classes.blocks.InterstellarLaunchPad;
 import pi.classes.blocks.ItemDefenseTurret;
 import pi.classes.bullets.EmpInterceptBulletType;
@@ -25,7 +26,7 @@ import static mindustry.type.ItemStack.with;
 import static pi.content.PiItemTypes.*;
 
 public class PiBlockTypes {
-    public static Block BaseCore, InterstellarLaunchPad, Gypsophila;
+    public static Block BaseCore, InterstellarLaunchPad, Gypsophila, OrientalPearlDefenseTower;
 
     public static void load() {
         BaseCore = Vars.content.block(PlantIndustry.name("基地"));
@@ -33,11 +34,42 @@ public class PiBlockTypes {
             consumesPower = true;
             consumePower(30f);
             consumeLiquid(cryofluid, 5f);
-            requirements(Category.effect, with(copper, 500, Items.lead, 600));
+            requirements(Category.effect, with(copper, 5000, lead, 6000, Crystal, 1200));
             itemCapacity = 60;
             launchTime = 3600f;
             size = 3;
             liquidCapacity = 600f;
+        }};
+
+        OrientalPearlDefenseTower = new DefensiveTower("东方明珠防御塔") {{
+            consumesPower = true;
+            consumePower(15f);
+            consumeLiquid(cryofluid, 3f);
+            requirements(Category.effect, with(copper, 1000, lead, 2000, plastanium, 500, phaseFabric, 500));
+            size = 3;
+            health = 6000;
+            liquidCapacity = 320;
+            shootSound = release;
+            range = 800f;
+            reload = 60f;
+            cooldownTime = 120f;
+            inaccuracy = 0f;
+            rotateSpeed = 6f;
+            targetAir = true;
+            targetGround = true;
+            shootType = new LaserBoltBulletType() {{
+                PedestalOffsetY = 48;
+                BodyOffsetY = 240;
+                lightningLength = 10;
+                collidesAir = true;
+                collidesGround = true;
+                pierce = pierceBuilding = true;
+                ammoMultiplier = 1f;
+                speed = 10;
+                lifetime = 60f;
+                damage = 2000;
+                collideTerrain = true;
+            }};
         }};
 
         Gypsophila = new ItemDefenseTurret("Gypsophila") {{
@@ -68,8 +100,8 @@ public class PiBlockTypes {
             requirements(Category.turret, with(
                     plastanium, 60,
                     silicon, 100,
-                    Biomass, 60,
-                    Crystal, 120
+                    Biomass, 90,
+                    Crystal, 150
             ));
 
             ammo(
@@ -176,8 +208,9 @@ public class PiBlockTypes {
                                 homingRange = 100f;
                                 speed = 8f;
                                 lifetime = 20f;
-                                damage = 48f;
+                                damage = 28f;
                                 splashDamage = 30f;
+                                splashDamageRadius = 40f;
                                 pierceArmor = true;
                                 radius = 100f;
                                 knockback = 10f;
