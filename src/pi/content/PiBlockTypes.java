@@ -46,7 +46,7 @@ public class PiBlockTypes {
             consumePower(15f);
             consumeLiquid(cryofluid, 3f);
             requirements(Category.effect, with(copper, 1000, lead, 2000, plastanium, 500, phaseFabric, 500));
-            size = 3;
+            size = 6;
             health = 6000;
             liquidCapacity = 320;
             shootSound = release;
@@ -57,17 +57,17 @@ public class PiBlockTypes {
             rotateSpeed = 6f;
             targetAir = true;
             targetGround = true;
+            PedestalOffsetY = 24;
+            headOffsetY = 80;
             shootType = new LaserBoltBulletType() {{
-                PedestalOffsetY = 48;
-                BodyOffsetY = 240;
-                lightningLength = 10;
-                collidesAir = true;
-                collidesGround = true;
+                hitSize = 5;
+                height = 400;
+                width = 5;
                 pierce = pierceBuilding = true;
                 ammoMultiplier = 1f;
-                speed = 10;
+                speed = 20;
                 lifetime = 60f;
-                damage = 2000;
+                damage = 5000;
                 collideTerrain = true;
             }};
         }};
