@@ -108,8 +108,8 @@ public class DefensiveTower extends PowerTurret {
             if (target != null) {
                 for (int i = 0; i < 2; ++i) {
                     for (int j = 0; j < 2; ++j) {
-                        //Log.infoTag("Debug", String.valueOf(Vars.world.tileWorld(target.x() - i, target.y() - j)));
-                        if (WATER_BLOCKS.contains(Vars.world.tileWorld(target.x() - i, target.y() - j).floor())) {
+                        Log.infoTag("Debug", String.valueOf(Vars.world.tileWorld(target.x() - i, target.y() - j)));
+                        if (Vars.world.tileWorld(target.x() - i, target.y() - j) != null && WATER_BLOCKS.contains(Vars.world.tileWorld(target.x() - i, target.y() - j).floor())) {
                             return true;
                         }
                     }
@@ -120,12 +120,18 @@ public class DefensiveTower extends PowerTurret {
 
         @Override
         public void updateTile() {
-            this.target = Units.bestTarget(this.team, this.x, this.y, DefensiveTower.this.range * 2, (e) -> !e.dead() && DefensiveTower.this.unitFilter.get(e) && (e.isGrounded() || DefensiveTower.this.targetAir) && (!e.isGrounded() || DefensiveTower.this.targetGround), (b) -> DefensiveTower.this.targetGround && DefensiveTower.this.buildingFilter.get(b), DefensiveTower.this.unitSort);
-            if (this.target != null && !this.target.getClass().getName().equals("water-extractor")) {
-                if (!onWater(this.target)) {
-                    this.target = null;
-                }
+            this.target = Units.findEnemyTile(this.team, this.x, this.y, DefensiveTower.this.range * 2, (b) -> DefensiveTower.this.targetGround && DefensiveTower.this.buildingFilter.get(b));
 
+            if (this.target != null) {
+                Log.infoTag("Debug", this.target.toString().split(":")[1] + this.target.toString().split(":")[1].equals("water-extractor"));
+            }
+
+            if (this.target != null && !this.target.toString().split(":")[1].equals("water-extractor")) {
+                this.target = null;
+            }
+
+            if (this.target != null && !onWater(this.target)) {
+                this.target = null;
             }
 
             if (this.target != null && !this.target.isAdded()) {
