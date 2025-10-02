@@ -69,6 +69,7 @@ public class PiBlockTypes {
                 lifetime = 60f;
                 damage = 5000;
                 collideTerrain = true;
+                collidesTiles = true;
             }};
         }};
 
