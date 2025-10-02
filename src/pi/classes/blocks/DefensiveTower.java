@@ -120,15 +120,7 @@ public class DefensiveTower extends PowerTurret {
 
         @Override
         public void updateTile() {
-            this.target = Units.findEnemyTile(this.team, this.x, this.y, DefensiveTower.this.range * 2, (b) -> DefensiveTower.this.targetGround && DefensiveTower.this.buildingFilter.get(b));
-
-            if (this.target != null) {
-                Log.infoTag("Debug", this.target.toString().split(":")[1] + this.target.toString().split(":")[1].equals("water-extractor"));
-            }
-
-            if (this.target != null && !this.target.toString().split(":")[1].equals("water-extractor")) {
-                this.target = null;
-            }
+            this.target = Units.findEnemyTile(this.team, this.x, this.y, DefensiveTower.this.range * 2, (b) -> DefensiveTower.this.targetGround && b.toString().split(":")[1].equals("water-extractor"));
 
             if (this.target != null && !onWater(this.target)) {
                 this.target = null;
