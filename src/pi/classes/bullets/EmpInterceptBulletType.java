@@ -8,7 +8,6 @@ public class EmpInterceptBulletType extends EmpBulletType {
 
     public EmpInterceptBulletType() {
         super();
-        this.collidesTiles = true;
     }
 
     @Override
