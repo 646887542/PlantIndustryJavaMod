@@ -7,9 +7,11 @@ import arc.math.Angles;
 import arc.math.Mathf;
 import arc.util.Log;
 import arc.util.Time;
+import mindustry.Vars;
 import mindustry.content.Blocks;
 import mindustry.entities.Units;
 import mindustry.entities.bullet.BulletType;
+import mindustry.gen.Posc;
 import mindustry.graphics.Layer;
 import mindustry.world.Block;
 import mindustry.world.blocks.defense.turrets.PowerTurret;
@@ -102,13 +104,28 @@ public class DefensiveTower extends PowerTurret {
 
         }
 
+        public boolean onWater(Posc target) {
+            if (target != null) {
+                for (int i = 0; i < 2; ++i) {
+                    for (int j = 0; j < 2; ++j) {
+                        //Log.infoTag("Debug", String.valueOf(Vars.world.tileWorld(target.x() - i, target.y() - j)));
+                        if (WATER_BLOCKS.contains(Vars.world.tileWorld(target.x() - i, target.y() - j).floor())) {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+
         @Override
         public void updateTile() {
             this.target = Units.bestTarget(this.team, this.x, this.y, DefensiveTower.this.range * 2, (e) -> !e.dead() && DefensiveTower.this.unitFilter.get(e) && (e.isGrounded() || DefensiveTower.this.targetAir) && (!e.isGrounded() || DefensiveTower.this.targetGround), (b) -> DefensiveTower.this.targetGround && DefensiveTower.this.buildingFilter.get(b), DefensiveTower.this.unitSort);
             if (this.target != null && !this.target.getClass().getName().equals("water-extractor")) {
-                if (!WATER_BLOCKS.contains(this.target.tileOn().floor())) {
+                if (!onWater(this.target)) {
                     this.target = null;
                 }
+
             }
 
             if (this.target != null && !this.target.isAdded()) {

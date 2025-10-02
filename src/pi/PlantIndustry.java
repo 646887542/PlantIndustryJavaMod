@@ -13,6 +13,7 @@ public class PlantIndustry extends Mod{
     public static String name(String name){
         return MOD_NAME + "-" + name;
     }
+
     public PlantIndustry() {
         Events.on(ClientLoadEvent.class, e -> {
             PiItemTypes.loadItem();
