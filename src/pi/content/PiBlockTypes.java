@@ -61,11 +61,11 @@ public class PiBlockTypes {
             headOffsetY = 80;
             shootType = new LaserBoltBulletType() {{
                 hitSize = 5;
-                height = 400;
+                height = 800;
                 width = 5;
                 pierce = pierceBuilding = true;
                 ammoMultiplier = 1f;
-                speed = 20;
+                speed = 30;
                 lifetime = 60f;
                 damage = 5000;
                 collideTerrain = true;
