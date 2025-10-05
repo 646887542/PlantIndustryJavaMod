@@ -29,14 +29,14 @@
 		]
 	},
 	"ammoTypes":{
-			"LuminousBerry": {
+			"Biomass": {
 				"reloadMultiplier":1.2,
 				"speed": 10,
-				"damage": 10,
+				"damage": 15,
 				"lifetime":50,
 				"width": 16,
 				"height": 16,
-				"ammoMultiplier":6,
+				"ammoMultiplier":1,
 				"knockback": 2,
 				"shootEffect": "shootBig",
 				"backColor":"#30FF98FF",
@@ -45,7 +45,7 @@
 				"splashDamageRadius":72,
 				"homingPower": 0.24,
 				"homingRange": 320,
-				"splashDamage":15,
+				"splashDamage":18,
 				"status":"melting",
 				"statusDuration":600,
 				"fragBullets": 5,
@@ -60,7 +60,7 @@
 					"heatColor":"#FF6A6AFF",
 					"trailColor":"#FF00D5FF",
 					"splashDamageRadius":72,
-					"splashDamage": 15,
+					"splashDamage": 20,
 					"status": "melting",
 					"statusDuration": 180,
 					"speed": 21,
