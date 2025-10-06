@@ -6,11 +6,13 @@ import mindustry.gen.Unit;
 import mindustry.type.UnitType;
 
 public class MagicUnitEntity<unit extends Unit> {
+    private float coolant = 0;
     public float limitDamage = -1f;
     public float totalLimitDamage = -1f;
     public float totalDamage;
     public float callHealthf = 0.5f;
     public float sec;
+    public float coolantTime = 180f;
     public boolean hitByLimitDamage = false; //单次攻击限伤
     public boolean hitOverTotalDamage = false; //每秒攻击限伤
     public boolean canCallUnit = false;
@@ -27,9 +29,10 @@ public class MagicUnitEntity<unit extends Unit> {
     }
 
     public void callUnit(unit u, UnitType ut, boolean recode, float fx, float fy) {
-        if (this.canCallUnit && ut != null && u.healthf() < callHealthf) {
+        if (this.canCallUnit && ut != null && u.healthf() < callHealthf && this.coolant <= 0) {
             ut.spawn(u.team, u.x + fx, u.y + fy);
             if (recode) {
+                this.coolant = this.coolantTime;
                 this.canCallUnit = false;
             }
         }
@@ -38,6 +41,11 @@ public class MagicUnitEntity<unit extends Unit> {
     public void update(unit u) {
         if (this.hitOverTotalDamage && this.totalLimitDamage != -1f) {
             this.sec += Time.delta;
+
+            if (this.coolant >= 0) {
+                this.coolant -= Time.delta;
+            }
+
             if (this.sec >= Time.toSeconds / 12) {
                 //Log.infoTag(String.valueOf(u.healthf()), String.valueOf(this.canCallUnit)/*u+"totalDamage:"+ this.totalDamage*/);
                 this.sec = 0;
@@ -51,7 +59,6 @@ public class MagicUnitEntity<unit extends Unit> {
     }
 
     public float Damage(float amount) {
-
         if (limitDamage != -1f && hitByLimitDamage) {
             if (amount > limitDamage) {
                 amount = 0f;
@@ -68,6 +75,7 @@ public class MagicUnitEntity<unit extends Unit> {
                 amount = this.totalLimitDamage - this.totalDamage;
             }
         }
+
         return amount;
     }
 }
