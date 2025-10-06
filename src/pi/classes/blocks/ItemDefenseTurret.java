@@ -1,6 +1,7 @@
 package pi.classes.blocks;
 
 import mindustry.gen.Groups;
+import mindustry.gen.Posc;
 import mindustry.world.blocks.defense.turrets.ItemTurret;
 
 public class ItemDefenseTurret extends ItemTurret {
@@ -11,6 +12,18 @@ public class ItemDefenseTurret extends ItemTurret {
     }
 
     public class ItemDefenseBuild extends ItemTurret.ItemTurretBuild {
+
+        @Override
+        public void targetPosition(Posc pos) {
+            boolean localPredictTarget = ItemDefenseTurret.this.predictTarget;
+            if (this.target.toString().split("#")[0].equals("Bullet")) {
+                ItemDefenseTurret.this.predictTarget = false;
+            }
+
+            super.targetPosition(pos);
+
+            ItemDefenseTurret.this.predictTarget = localPredictTarget;
+        }
 
         @Override
         public void updateTile() {
