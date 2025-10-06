@@ -18,13 +18,8 @@ public class MagicUnitEntity<unit extends Unit> {
     public boolean canCallUnit = false;
 
     public void callUnit(unit u, UnitType ut, boolean recode, int amount) {
-        if (this.canCallUnit && ut != null && amount > 0 && u.healthf() < callHealthf) {
-            for (int i = 0; i < amount; i++) {
-                ut.spawn(u.team, u.x, u.y);
-            }
-            if (recode) {
-                this.canCallUnit = false;
-            }
+        for (int i = 0; i < amount; i++) {
+            this.callUnit(u, ut, recode, 0, 0);
         }
     }
 
