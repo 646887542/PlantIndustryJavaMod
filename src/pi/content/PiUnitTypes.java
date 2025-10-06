@@ -34,7 +34,7 @@ public class PiUnitTypes {
                 canBoost = true;
                 hitSize = 60f;
                 armor = 220f;
-                crushDamage = 100f;
+                crushDamage = 90f;
                 treadPullOffset = 1;
                 clipSize = 60f;
                 targetGround = false;
@@ -48,7 +48,7 @@ public class PiUnitTypes {
                         StatusEffects.sapped, StatusEffects.sporeSlowed, StatusEffects.tarred
                 );
 
-                abilities.add(new RepairFieldAbility(8000f, 60f, 5f));
+                abilities.add(new RepairFieldAbility(6000f, 60f, 5f));
 
                 targetFlags = new BlockFlag[]{BlockFlag.factory, BlockFlag.turret};
 
