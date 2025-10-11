@@ -106,7 +106,7 @@ public class PiBlockTypes {
             ));
 
             ammo(
-                    titanium, new EmpInterceptBulletType() {{
+                    Blueberries, new EmpInterceptBulletType() {{
                         // 基础属性
                         scaleLife = true;
                         timeIncrease = 2f;

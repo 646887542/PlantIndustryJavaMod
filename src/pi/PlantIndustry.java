@@ -16,7 +16,6 @@ public class PlantIndustry extends Mod{
 
     public PlantIndustry() {
         Events.on(ClientLoadEvent.class, e -> {
-            PiItemTypes.loadItem();
             PiBlockTypes.loadBlock();
             Log.infoTag("Debug", String.valueOf(PiBlockTypes.BaseCore));
             Log.infoTag("Debug", String.valueOf(PiItemTypes.Crystal));
@@ -25,6 +24,7 @@ public class PlantIndustry extends Mod{
 
     @Override
     public void loadContent() {
+        PiItemTypes.load();
         EntityRegister.load();
         PiUnitTypes.load();
         PiStatuses.load();
